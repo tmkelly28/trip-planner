@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var swig = require('swig');
+var sass = require('node-sass-middleware');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -12,7 +14,8 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'html');
+app.engine('html', swig.renderFile)
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -20,6 +23,13 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(
+  sass({
+    src: __dirname + '/assets', //where the sass files are 
+    dest: __dirname + '/public', //where css should go
+    debug: true
+  })
+);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
@@ -56,5 +66,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(8080, () => console.log("Express server listening on PORT 8080")});
 
 module.exports = app;
