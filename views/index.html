@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+
 <select name="hotels">
 	{% for hotel in hotels %}
 	<option value="{{hotel.name}}">{{ hotel.name }}</option>
