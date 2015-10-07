@@ -4,12 +4,63 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip Planner</title>
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="stylesheets/trip-planner.css" rel="stylesheet" />
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=KEY&sensor=true"></script>
   </head>
 
   <body>
+
+  	<!-- Navbar -->
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">TripPlanner</a>
+	    </div>
+	    <div>
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">Home</a></li>
+	        <li><a href="#">About</a></li> 
+	        <li><a href="#">Contact</a></li> 
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
     {% block body %}
 
     {% endblock %}
 
   </body>
+
+  <!-- Google Maps Script -->
+  <script>
+  	function initialize_gmaps() {
+	    // initialize new google maps LatLng object
+	    var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
+	    // set the map options hash
+	    var mapOptions = {
+	        center: myLatlng,
+	        zoom: 16,
+	        mapTypeId: google.maps.MapTypeId.ROADMAP
+	    };
+	    // get the maps div's HTML obj
+	    var map_canvas_obj = document.getElementById("map-canvas");
+	    // initialize a new Google Map with the options
+	    var map = new google.maps.Map(map_canvas_obj, mapOptions);
+	    // Add the marker to the map
+	    var marker = new google.maps.Marker({
+	        position: myLatlng,
+	        title:"Hello World!"
+	    });
+	    // Add the marker to the map by calling setMap()
+	    marker.setMap(map);
+	}
+	$(document).ready(function() {
+	    initialize_gmaps();
+	});
+
+	</script>
 </html>
+
