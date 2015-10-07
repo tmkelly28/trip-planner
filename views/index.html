@@ -1,14 +1,12 @@
-{% extends 'layout.html' %}
 
+{% extends 'layout.html' %}
 {% block body %}
 
 <div class="row"> 
 	<!-- left field column - map and item selectors -->
-	<div class="col-lg-8">
-		<div id="map-canvas"></div>
-	</div> 
+	
 
-	<div id="days-queue" class="col-lg-4">
+	<div id="days-queue" class="col-lg-3">
 
 		<div class="card days">
 			<div class="day-header"><h1>Day 1</h1></div>
@@ -16,7 +14,7 @@
 				<li><span class="glyphicon glyphicon-bed"></span><h3>Hotel</h3>
 					<ul>
 						<li>Waldorf Astoria<a href="#">
-          <span class="glyphicon glyphicon-minus"></span>
+          <span class="glyphicon glyphicon-remove-circle"></span>
         </a></li>
 					</ul>
 				</li>
@@ -24,13 +22,13 @@
 				<li><span class="glyphicon glyphicon-cutlery"></span><h3>Restaurants</h3>
 					<ul>
 						<li>Tamarind<a href="#">
-          <span class="glyphicon glyphicon-minus"></span>
+          <span class="glyphicon glyphicon-remove-circle"></span>
         </a></li>
 						<li>McDonalds<a href="#">
-          <span class="glyphicon glyphicon-minus"></span>
+          <span class="glyphicon glyphicon-remove-circle"></span>
         </a></li>
 						<li>Bouley<a href="#">
-          <span class="glyphicon glyphicon-minus"></span>
+          <span class="glyphicon glyphicon-remove-circle"></span>
         </a></li>
 					</ul>
 				</li>
@@ -38,45 +36,114 @@
 				<li><span class="glyphicon glyphicon-asterisk"></span><h3>Activities</h3>
 					<ul>
 						<li>Statue of Liberty<a href="#">
-          <span class="glyphicon glyphicon-minus"></span>
+          <span class="glyphicon glyphicon-remove-circle"></span>
         </a></li>
 						<li>Highline<a href="#">
-          <span class="glyphicon glyphicon-minus"></span>
+          <span class="glyphicon glyphicon-remove-circle"></span>
         </a></li>
 						<li>Radio City<a href="#">
-          <span class="glyphicon glyphicon-minus"></span>
+          <span class="glyphicon glyphicon-remove-circle"></span>
         </a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
+
+
 		<div class="card days">
+			<div class="day-header"><h1>Day 2</h1></div>
 			<ul>
-				<li>Hotel</li>
-				<li>Restaurants
-					<ul></ul>
+				<li><span class="glyphicon glyphicon-bed"></span><h3>Hotel</h3>
+					<ul>
+						<li>Waldorf Astoria<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+					</ul>
 				</li>
-				<li>Activities
-					<ul></ul>
+				<hr>
+				<li><span class="glyphicon glyphicon-cutlery"></span><h3>Restaurants</h3>
+					<ul>
+						<li>Tamarind<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+						<li>McDonalds<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+						<li>Bouley<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+					</ul>
+				</li>
+				<hr>
+				<li><span class="glyphicon glyphicon-asterisk"></span><h3>Activities</h3>
+					<ul>
+						<li>Statue of Liberty<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+						<li>Highline<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+						<li>Radio City<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+					</ul>
 				</li>
 			</ul>
 		</div>
 
+
 		<div class="card days">
+			<div class="day-header"><h1>Day 3</h1></div>
 			<ul>
-				<li>Hotel</li>
-				<li>Restaurants
-					<ul></ul>
+				<li><span class="glyphicon glyphicon-bed"></span><h3>Hotel</h3>
+					<ul>
+						<li>Waldorf Astoria<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+					</ul>
 				</li>
-				<li>Activities
-					<ul></ul>
+				<hr>
+				<li><span class="glyphicon glyphicon-cutlery"></span><h3>Restaurants</h3>
+					<ul>
+						<li>Tamarind<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+						<li>McDonalds<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+						<li>Bouley<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+					</ul>
+				</li>
+				<hr>
+				<li><span class="glyphicon glyphicon-asterisk"></span><h3>Activities</h3>
+					<ul>
+						<li>Statue of Liberty<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+						<li>Highline<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+						<li>Radio City<a href="#">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a></li>
+					</ul>
 				</li>
 			</ul>
 		</div>
+
+
+	
 		<div id="add-day" class="card">
-			<h1><span class="glyphicon glyphicon-plus"></h1>
+			<h1><span class="glyphicon glyphicon-plus"></span></h1>
 		</div>
 	</div>
+
+<div class="col-lg-9">
+		<div id="map-canvas"></div>
+	</div> 
+	
 </div>
 
 {% endblock %}

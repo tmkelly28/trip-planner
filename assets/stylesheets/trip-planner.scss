@@ -21,9 +21,9 @@ body {
 
 .card {
 	float: left;
-	width: 90%;
+	width: 100%;
 	min-height: 200px;
-	margin: 5px auto;
+	margin: 8px 4px 8px 10px;
 	background-color: #E9E5DC;
 	border-width: 1px;
 	border-style: solid;
@@ -73,11 +73,40 @@ body {
 	}
 }
 
+.navbar {
+	color: gray;
+	margin: 0;
+	background-color: #CADFAA;
+	border-width: 0;
+	border-radius: 0;
+	li {
+		padding-left: 5px;
+		padding-right: 10px;	
+	}
+}
+
+#navbar-logo {
+	color: #F75C50;
+	font-size: 26px;
+}
+
+
+.glyphicon-plus-sign {
+	padding-top: 4px;
+	padding-right: 16px;
+}
+
+.glyphicon-remove-circle {
+	color: #F75C50;
+	padding-left: 10px;
+}
+
+
 .day-header {
 	width: 100%;
-	padding-top: 15px;
+	padding-top: 12px;
 	padding-bottom: 5px;
-	padding-left: 5px;
+	padding-left: 8px;
 	background-color: #FA9E25;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
