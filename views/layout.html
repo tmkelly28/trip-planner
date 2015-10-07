@@ -7,7 +7,7 @@
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="stylesheets/trip-planner.css" rel="stylesheet" />
     <script src="jquery/dist/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=&sensor=true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByYEU_PnQxEuNVL7Se6MoKy98ukV4Hd-4&sensor=true"></script>
   </head>
 
   <body>
@@ -23,6 +23,45 @@
 	        <li class="active"><a href="#">Home</a></li>
 	        <li><a href="#">About</a></li> 
 	        <li><a href="#">Contact</a></li> 
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		<div>
+	      <ul class="nav navbar-nav">
+	        <li>
+	        	<div class="form-group">
+	        		<label for="hotels">Hotels</label>
+	        		<select class="form-control" id="hotels">
+						{% for hotel in hotels %}
+						<option value="{{hotel.name}}">{{ hotel.name }}</option>
+						{% endfor %}
+					</select>
+	        	</div>
+	        </li> 
+	        <li>
+	        	<div class="form-group">
+	        		<label for="hotels">Restaurants</label>
+	        		<select class="form-control" id="restaurants">
+						{% for restaurant in restaurants %}
+						<option value="{{restaurant.name}}">{{ restaurant.name }}</option>
+						{% endfor %}
+					</select>
+	        	</div>
+	        </li>
+	        <li>
+	        	<div class="form-group">
+	        		<label for="hotels">Hotels</label>
+	        		<select class="form-control" id="activities">
+						{% for activity in activities %}
+						<option value="{{activity.name}}">{{ activity.name }}</option>
+						{% endfor %}
+					</select>
+	        	</div>
+	        </li> 
 	      </ul>
 	    </div>
 	  </div>

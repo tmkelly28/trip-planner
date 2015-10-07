@@ -1,3 +1,9 @@
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+body {
+  background-color: #B3D1FF; }
+
 #map-canvas {
   height: 96vh;
   width: 100%;
@@ -12,17 +18,52 @@
   float: left;
   width: 90%;
   min-height: 200px;
-  margin: 15px auto;
-  padding: 10px 10%;
-  background-color: orange;
-  box-sizing: border-box;
-  font-size: 28px; }
+  margin: 5px auto;
+  background-color: #E9E5DC;
+  border-width: 1px;
+  border-style: solid;
+  border-color: gray;
+  font-size: 28px;
+  border-radius: 5px;
+  color: #A88074;
+  text-shadow: 1px 1px white;
+  font-weight: 300; }
+  .card h1 {
+    color: #A36200;
+    text-shadow: 0 0 black;
+    font-weight: 200; }
+  .card h3 {
+    display: inline-block;
+    padding-left: 10px;
+    color: black;
+    text-shadow: 0 0 black;
+    font-weight: 100; }
+  .card hr {
+    border-color: gray; }
 
 #add-day {
   text-align: center;
   min-height: 100px;
-  background-color: lightblue; }
+  background-color: #CADFAA; }
+  #add-day h1 {
+    color: #7CB342;
+    text-shadow: 0 0 #7CB342; }
 
 #days-queue {
   height: 100vh;
   overflow: scroll; }
+  #days-queue li {
+    list-style-type: none;
+    font-size: 18px; }
+
+.day-header {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  background-color: #FA9E25;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: gray; }
